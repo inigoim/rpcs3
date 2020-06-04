@@ -42,7 +42,7 @@ bool utils::has_avx2()
 bool utils::has_rtm()
 {
 	static const bool g_value = get_cpuid(0, 0)[0] >= 0x7 && (get_cpuid(7, 0)[1] & 0x800) == 0x800;
-	return g_value;
+	return true;
 }
 
 bool utils::has_tsx_force_abort()
